@@ -1,0 +1,1 @@
+{"name":"Local: artclass","url":"/Users/jason/AIO/Art Class 2/artclass.cpp","tests":[{"id":1692163376508,"input":"5\n2 3\n3 1\n4 2\n4 4\n6 1","output":"12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/jason/AIO/Art Class 2/artclass.cpp","group":"local","local":true}

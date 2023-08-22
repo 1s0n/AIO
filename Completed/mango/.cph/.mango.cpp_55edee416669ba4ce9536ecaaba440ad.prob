@@ -1,0 +1,1 @@
+{"name":"Local: mango","url":"/Users/jason/AIO/mango/mango.cpp","tests":[{"id":1692591745370,"input":"23 40 17 0","output":"40"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/jason/AIO/mango/mango.cpp","group":"local","local":true}
