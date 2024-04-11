@@ -1,1 +1,0 @@
-{"name":"Local: composing","url":"/Users/jason/AIO/Composing_Pyramids/composing.cpp","tests":[{"id":1691118540722,"input":"6\n2 1 3 4 2 1","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/jason/AIO/Composing_Pyramids/composing.cpp","group":"local","local":true}
