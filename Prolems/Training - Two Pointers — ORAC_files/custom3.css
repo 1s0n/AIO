@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
+
+* {
+    tab-size: 4;
+	-moz-tab-size: 4;
+}
+
+body {
+	font-family: "Droid Serif";
+}
+
+body h1 {
+	font-family: "Arial";
+    font-weight: bold;
+}
+
+body h2 {
+	font-family: "Arial";
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #c2c1c1;
+}
+
+h2.no-indent {
+    padding-left: none;
+    border-left: none;
+}
+
+body h3, body h4, body h5, body h6 {
+	font-family: "Arial";
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.autocomplete-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Nav search */
+
+.nav-search {
+  flex-wrap: nowrap;
+  width: 15rem;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 0.25rem;
+}
+
+.nav-search:focus-within, .nav-search-dropdown:hover ~ .nav-search, .nav-search.keep-alive {
+  border-color: #007bff !important;
+  border-bottom-width: 0 !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 15rem;
+}
+
+.nav-search-dropdown {
+  position: absolute;
+  color: #212529;
+  border: 1px solid rgba(0,0,0,.15);
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: -100%;
+  z-index: 999;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  flex-direction: column;
+  place-items: center;
+  flex-basis: 40px;
+}
+
+.nav-search-dropdown.hide-hover {
+  display: none !important;
+}
+
+/* Make dropdown show only when form focused */
+.nav-search ~ .nav-search-dropdown {
+  display: none;
+}
+
+.nav-search:focus-within ~ .nav-search-dropdown, .nav-search-dropdown:hover {
+  display: flex;
+}
+
+.nav-search-item {
+  background-color: transparent;
+  white-space: nowrap;
+  color: #212529;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: table-cell;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.search-placeholder-item:hover {
+  background-color: inherit !important;
+}
+
+.nav-search-item:first-child, .nav-search-item:nth-child(2) {
+  border-top-right-radius: 20px;
+}
+
+.nav-search-item:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.nav-search-item:hover {
+  background-color: #f8f9fa;
+  color: #16181b;
+  text-decoration: none;
+}
+
+.search-placeholder-item {
+  display: none;
+}
+
+.search-placeholder-item:last-child {
+  display: table-cell;
+}
+
+.nav-search-group {
+  position: relative;
+  width: min-content;
+}
+
+#nav-search-input {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#nav-search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* End nav search */
+
+.badge {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+h1 {
+    text-align: center;
+}
+
+.hub-badge {
+  width: 60px;
+}
+
+.sub-badge {
+  width: 40px;
+}
+
+.x-card-sets {
+}
+
+.x-card-body-sets {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* Taken from https://css-tricks.com/examples/hrs/ */
+.x-hr-footer {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    padding-bottom: 15rem;
+}
+
+.progress-column {
+	/* 40% width to normalise partitioning of progress column. */
+	width: 40%;
+	/* Line height 1 to centre badges into the style */
+	line-height: 1;
+}
+
+table.table th, table.table td {
+	vertical-align: middle;
+}
+
+.problemset-display {
+	width: 100%;
+}
+
+/* Click to expand/collapse */
+
+.problemset-display table th span.expand-text {
+	display: none;
+}
+
+.problemset-display table th span.collapsed span.expand-text {
+	display: inline;
+}
+
+.problemset-display table th span.collapse-text {
+	display: inline;
+}
+
+.problemset-display table th span.collapsed span.collapse-text {
+	display: none;
+}
+
+.lighter-text {
+	color: #cccccc;
+}
+
+.table-fixed {
+    table-layout: fixed;
+}
+
+/* Different styling for sets shown on module pages */
+.module-set-style.problemset-display {
+    width: 80%;
+    padding-bottom: 1rem;
+}
+
+.module-set-style.problemset-display table tr td {
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+.module-set-style.problemset-display table {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.badge-cmsred {
+    background-color: #ff9999;
+    color: black;
+}
+
+.badge-cmsgreen {
+    background-color: #99ff99;
+    color: black;
+}
+.badge-cmsyellow {
+    background-color: #ffff99;
+    color: black;
+}
+.badge-no-submission {
+    box-shadow: 0 0 0 1px black inset;
+    background-color: white;
+    color: black;
+}
+
+.badge-ac {
+    background-color: green;
+    color: white;
+}
+
+.badge-wa {
+    background-color: red;
+    color: white;
+}
+
+.badge-partial {
+    background-color: yellow;
+    color: black;
+}
+
+.badge-mle {
+    background-color: #f5a9b9;
+    color: black;
+}
+
+.badge-tle {
+    background-color: #5bcffa;
+    color: black;
+}
+
+.badge-re {
+    background-color: #B888E7;
+}
+
+.badge-na {
+    background-color: white;
+    box-shadow: 0 0 0 1px black inset;
+}
+
+.badge-tag {
+  cursor: pointer;
+  background-color: #fde1c4;
+  margin-right: .25em;
+  margin-bottom: .25em;
+}
+
+.badge-tag.selected-tag {
+  background-color: #f9ab55;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tags-description {
+  white-space: nowrap;
+  margin-right: .25em;
+  margin-bottom: .25em;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.minibadge-container {
+	display: flex;
+	border: 1px solid grey;
+}
+
+.minibadge {
+	flex-grow: 1;
+	height: 1em;
+}
+
+.minibadge.badge-na {
+	box-shadow: none;
+}
+
+.max-content-table {
+  width: max-content !important;
+}
+
+/* Highlight.js */
+
+/* for block of numbers */
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: right;
+    color: #516d7b;
+    border-right: 1px solid #516d7b;
+    vertical-align: top;
+    padding-right: 5px !important;
+
+}
+
+/* for block of code */
+.hljs-ln-code {
+    padding-left: 10px !important;
+}
+
+/* Username field to prevent super long usernames from breaking the page */
+
+#navbarDropdownProfile {
+  max-width: 15em;
+}
+
+.username-field {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Leaderboard grid */
+
+.leaderboard-grid {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: grid;
+  list-style: none;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-gap: 15px;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+/* These are the thresholds that will determine when the grid will snap to
+ * 3 columns or 1 column. Note the repeating units will have to
+ * be changed if you change the number of people displayed on the
+ * leaderboard. */
+
+@media screen and (max-width: 900px) {
+  .leaderboard-grid {
+    grid-template-rows: repeat(30, minmax(0, 1fr)) !important;
+  }
+}
+
+.leaderboard-grid h3 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0;
+}
+
+.leaderboard-grid li {
+  white-space: nowrap;
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-shadow: 0 0 0 1px black inset;
+  vertical-align: middle;
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.leaderboard-grid li .place {
+  width: 50px;
+  border-right: 1px solid black;
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+
+.leaderboard-grid li .username-field {
+  flex-grow: 1;
+}
+
+.leaderboard-grid li .solvecount {
+  width: 50px;
+  border-left: 1px solid black;
+  margin-left: 5px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.sample-io-summary > div {
+  padding: .3rem;
+}
+
+.sample-case-expand {
+  font-size: 24px;
+}
+
+.sample-io-summary.collapse.show, .sample-io-summary.collapsing {
+  border-top: 1px solid #dee2e6;
+}
+
+/* Solution Templates */
+table.template-table {
+  padding: 1rem;
+  border-collapse: separate;
+  border-radius: 10pt;
+  border: 1px solid black;
+}
+
+/* Attachments */
+.attachments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+.attachments-grid .card-body {
+  display: flex;
+  place-items: center;
+}
+
+.attachments-grid .card-body div {
+  text-align: center;
+  flex-grow: 1;
+  line-height: 1;
+}
+
+/* Login */
+.login-card {
+  width: min(30rem, 100%);
+  margin: auto;
+  padding: 3rem;
+}
+
+/* Landing page */
+div.title-row {
+  padding-top: 4rem;
+}
+
+div.subtitle-row {
+  padding-bottom: 4rem;
+}
+
+div.subcard-row {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+}
+
+h1.landing {
+  font-size: min(5rem, 13vw);
+  font-family: arial;
+  color:black;
+  font-weight: bold;
+}
+
+p.landing-subtitle {
+  font-size: min(2rem, 6vw);
+  color: gray;
+  font-family: monospace;
+}
+
+span.landing-text {
+  font-size: min(1.5rem, 5vw);
+  color: gray;
+  font-family: arial;
+}
+
+h2.landing {
+  font-size: min(2rem, 7vw);
+  color:black;
+  font-family: arial;
+}
+
+p.landing-login {
+  font-size: 1rem;
+  color: gray;
+}
+
+/* Modules styling */
+div.module-navrow {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+div.module-navrow-page-col {
+  max-width: 0%;
+  padding-bottom: 3rem;
+}
+
+div.module-navrow-page-col-here-marker {
+  max-width: 0%;
+  padding-bottom: 1rem;
+  color:grey;
+}
+
+.text-overflow-center-here-marker {
+    margin-left: -120%;
+    margin-right: -100%;
+    text-align: center;
+}
+
+.text-overflow-center-page-title {
+    margin-left: -150%;
+    margin-right: -150%;
+    text-align: center;
+}
+
+div.module-navrow-page-col-spacer {
+  max-width: 10%;
+  min-width: 90px;
+}
+
+div.module-exercise {
+  padding-bottom: 0px;
+  padding-top: 10px;
+  border: 3px solid black;
+}
+
+div.module-exercise-pending {
+  background-color: #e7eeff;
+}
+
+div.module-exercise-complete {
+  background-color: #bdffbf;
+}
+
+h2.module-exercise {
+}
+
+div.module-exercise-desc {
+}
+
+div.module-exercise-set {
+}
+
+hr.navrow-spacer-hr {
+    width: 100%;
+    margin-top: 0.7rem; /* Why is it 0.7? who knows */
+    border-top: 2px solid gray;
+}
+
+div.module-nav-footer div {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+div.module-nav-footer div.icon {
+  max-width: 5%;
+}
+
+div.module-nav-footer i.fa-caret-left {
+  font-size: 3rem;
+}
+
+div.module-nav-footer i.fa-caret-right {
+  font-size: 3rem;
+}
+
+/* I want a diamond */
+.fa-square {
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.fas-square {
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Getting started page */
+div.choice-cards {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 30px;
+  margin-left:  0.3rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.6rem;
+  min-width: 300px;
+  font-family: "Arial";
+  font-weight: bold;
+  color: #f8f9fa;
+}
+
+.start-gradient-blue {
+  background: rgb(2,0,36);
+  background: linear-gradient(160deg, rgba(74,184,183,1) 0%, rgba(9,9,121,1) 64%, rgba(2,0,36,1) 100%);
+}
+
+.start-gradient-red {
+  background: rgb(38,4,0);
+  background: linear-gradient(160deg, rgba(38,4,0,1) 0%, rgba(61,2,2,1) 22%, rgba(177,29,51,1) 64%, rgba(231,151,21,1) 100%);
+}
+
+.start-gradient-purple {
+  background: rgb(15,0,38);
+  background: linear-gradient(160deg, rgba(15,0,38,1) 0%, rgba(148,29,177,1) 70%, rgba(231,21,127,1) 100%);
+}
+
+div.choice-cards h2 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+div.choice-cards svg {
+    fill:#f8f9fa;
+}
+
+div.choice-cards button {
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+div.choice-cards button.blue {
+    background-color: #6889ff;
+}
+
+div.choice-cards button.red {
+    background-color: #6a1e99;
+}
+
+div.choice-cards button.purple {
+    background-color: #3f2b5e;
+}
+
+p.starter-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: gray;
+}
+
+.starter-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.starter-row .choice-cards {
+  flex: 1 1 31%;
+}
+
+@media (max-width: 850px) {
+  .starter-row {
+    flex-direction: column;
+  }
+  .starter-row .choice-cards {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+  /* Remove bottom margin from the last column to avoid extra space */
+  .starter-row .choice-cards:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Multicode blocks styling */
+
+
+/* Mark like, everything as !important to override the bootstrap styling */
+ul.multicode {
+  border-bottom: 3px solid black !important;
+}
+
+li.multicode {
+  margin-bottom: -3px !important;
+}
+
+a.multicode.active {
+  border: none !important;
+  border-right: 3px solid black !important;
+  border-left: 3px solid black !important;
+  border-top: 3px solid black !important;
+}
+
+.multicode-content {
+  border-right: 3px solid black !important;
+  border-left: 3px solid black !important;
+  border-bottom: 3px solid black !important;
+  margin-bottom: 1rem;
+}
+
+.multicode-content pre {
+  margin-bottom: 0px;
+  font-size: 100%;
+}
+
+.multicode-content code {
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+/* Utilities */
+div.info-panel {
+  padding-bottom: 0px;
+  padding-top: 10px;
+  margin-left:  0.6rem;
+  margin-right: 0.6rem;
+  border: 3px solid black;
+  border-radius: 3px;
+}
+
+div.info-panel h3 {
+  font-size: 1.5rem;
+}
+
+div.info-panel-colour-1 {
+  background-color: #cbcbff;
+}
+
+div.info-panel-colour-2 {
+  background-color: #cbcbff;
+}
+
+/* Displaying code snippets side-by-side in tutorials */
+div.code-container {
+  display: flex;
+}
+
+div.code-block {
+  flex: 1;
+  margin-right: 10px;
+}
+
+img.block {
+  /* 100% on big sceens, 60% on small screens */
+  width: clamp(60%, 600px, 100%);
+  /* margin auto and display block makes the image centered */
+  margin: auto;
+  display: block;
+}
+
+video.block {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+/* make problem title always appear in the top center of the problem navbar, even when the buttons on either side collapse. */
+.problem-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
